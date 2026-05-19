@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "NunitoPOJ";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/NunitoPOJ-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NunitoPOJ";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/NunitoPOJ-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+:host {
+  all: initial;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 2147483647;
+  pointer-events: none;
+}
+
+.card {
+  pointer-events: auto;
+  position: fixed;
+  max-width: 420px;
+  min-width: 240px;
+  max-height: 60vh;
+  overflow-y: auto;
+  background: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #d4d4d8;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  padding: 12px 14px;
+  font-family: "NunitoPOJ", "Noto Sans TC", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.entry + .entry {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #d4d4d8;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.dialect {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #fef3c7;
+  color: #92400e;
+  line-height: 1.4;
+}
+.dialect.nam {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.term {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pfs {
+  margin-top: 4px;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.gloss {
+  margin-top: 6px;
+}
+
+.example {
+  margin-top: 6px;
+  color: #555;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+
+.footer {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.footer a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.more {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
