@@ -90,7 +90,7 @@ export function isBlock(el: Element): boolean {
 // annotate (script/style/code/pre/ruby/.pfs-pfs/etc.).
 export function isSkipped(el: Element): boolean {
   if (el.closest(SKIP_SELECTOR) !== null) return true;
-  if (IS_HAKKADICT) return isNonSiyenEveryday(el) || isNonSiyenColumn(el);
+  if (IS_HAKKADICT) return isNonSiyenEveryday(el) || isNonSiyenColumn(el) || isHakkadictIndexRow(el);
   if (IS_ELEARNING) return isNonSiyenElearning(el);
   if (IS_MOEDICT) return isNonSiyenMoedict(el);
   return false;
@@ -138,6 +138,15 @@ function isNonSiyenColumn(el: Element): boolean {
   if (cols.size === 0) return false;
   const idx = Array.prototype.indexOf.call(tr.children, td);
   return cols.has(idx);
+}
+
+// hakkadict.moe.edu.tw detail pages: the 索引類別 row contains phonetic index
+// fragments (e.g. "陰平(1/ˊ/24)") that trigger false KPPY detection.
+function isHakkadictIndexRow(el: Element): boolean {
+  const tr = el.closest("tr");
+  if (!tr) return false;
+  const th = tr.querySelector(":scope > th");
+  return th?.textContent?.trim() === "索引類別";
 }
 
 // elearning.hakka.gov.tw: each dialect block is

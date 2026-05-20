@@ -1,5 +1,6 @@
 import { isAllowed, loadAllowlist, loadEnabled } from "../shared/allowlist";
 import { isHakfaConverterLoaded } from "../converter/konverttopfs";
+import { annotateHakkadictHeadwords } from "./hakkadict";
 import { installSelectionPopup, triggerLookup, uninstallSelectionPopup } from "./selection-popup";
 import { scanSubtree, startObserving, stopObserving } from "./walker";
 
@@ -26,6 +27,7 @@ function syncToCurrentUrl(): void {
   const allowedNow = isAllowed(location, allowlist);
   if (allowedNow && !active) {
     if (isHakfaConverterLoaded) {
+      annotateHakkadictHeadwords();
       scanSubtree(document.body);
       startObserving();
     }
