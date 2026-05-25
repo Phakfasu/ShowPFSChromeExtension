@@ -1,6 +1,6 @@
 {
   "name": "show-pfs-chrome-extension",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Annotates Hakfa MOE-pinyin with Pha̍k-fa-sṳ (白話字) readings, and shows a Hakfa dictionary popup on text selection.",
   "private": true,
   "type": "module",

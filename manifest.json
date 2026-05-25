@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ShowPFS - 客語 Pha̍k-fa-sṳ Annotator & Dictionary",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Annotates Hakfa MOE-pinyin with Pha̍k-fa-sṳ (白話字) readings, and shows a Hakfa dictionary popup on text selection.",
   "icons": {
     "16": "src/icons/icon-16.png",
