@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "ShowPFS - 客語 Pha̍k-fa-sṳ Annotator & Dictionary",
+  "version": "0.9.5",
+  "description": "Annotates Hakfa MOE-pinyin with Pha̍k-fa-sṳ (白話字) readings, and shows a Hakfa dictionary popup on text selection.",
+  "icons": {
+    "16": "src/icons/icon-16.png",
+    "32": "src/icons/icon-32.png",
+    "48": "src/icons/icon-48.png",
+    "128": "src/icons/icon-128.png"
+  },
+  "permissions": ["storage", "scripting", "contextMenus", "activeTab"],
+  "host_permissions": [
+    "*://hakkadict.moe.edu.tw/*",
+    "*://elearning.hakka.gov.tw/hakka/dictionary*",
+    "*://elearning.hakka.gov.tw/hakka/cert/vocabulary*",
+    "*://www.moedict.tw/:*"
+  ],
+  "optional_host_permissions": ["*://*/*"],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "ShowPFS allowlist",
+    "default_icon": {
+      "16": "src/icons/icon-16.png",
+      "32": "src/icons/icon-32.png",
+      "48": "src/icons/icon-48.png",
+      "128": "src/icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/background/service_worker.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://hakkadict.moe.edu.tw/*",
+        "*://elearning.hakka.gov.tw/hakka/dictionary*",
+        "*://elearning.hakka.gov.tw/hakka/cert/vocabulary*",
+        "*://www.moedict.tw/:*"
+      ],
+      "js": ["src/content/content.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/content/styles.css",
+        "src/content/popup.css",
+        "src/data/dict-index.json",
+        "src/data/dict-version.json",
+        "src/fonts/*"
+      ],
+      "matches": ["<all_urls>"],
+      "use_dynamic_url": true
+    }
+  ]
+}

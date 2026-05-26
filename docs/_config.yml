@@ -1,0 +1,12 @@
+title: ShowPFS
+description: Chrome extension that annotates Hakfa KPPY text with the PFS (白話字) reading.
+theme: jekyll-theme-minimal
+show_downloads: false
+
+# Treat this site as the GitHub-Pages root for the repo. With the default
+# GitHub Pages → /docs setup the baseurl is "" relative to the repo URL.
+baseurl: ""
+
+# Don't try to render the docs/ files as drafts/posts.
+include:
+  - PRIVACY.md

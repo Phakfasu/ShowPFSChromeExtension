@@ -1,0 +1,6 @@
+[submodule "lib/KonvertToPFS"]
+	path = lib/KonvertToPFS
+	url = https://github.com/Phakfasu/KonvertToPFS.git
+[submodule "lib/HakkaDictMoeDataMirror"]
+	path = lib/HakkaDictMoeDataMirror
+	url = https://github.com/ThoivanHakfa/HakkaDictMoeDataMirror.git

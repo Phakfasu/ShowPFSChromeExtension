@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "NunitoPOJ";
+  src: url("../fonts/NunitoPOJ-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NunitoPOJ";
+  src: url("../fonts/NunitoPOJ-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.pfs-pfs {
+  font-family: "NunitoPOJ", "Noto Sans TC", system-ui, sans-serif;
+  font-weight: inherit;
+  color: #000;
+  vertical-align: baseline;
+  font-size: 1em;
+  line-height: inherit;
+}
+
+.pfs-pfs-bg {
+  background-color: #fefce8;
+}
